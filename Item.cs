@@ -1,21 +1,19 @@
+using System.Text.Json.Serialization;
+
 namespace ApiClient
 {
     public class Item
     {
-        public int id { get; set; }
-        public string type { get; set; }
-        public string setup { get; set; }
-        public string punchline { get; set; }
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
 
+        [JsonPropertyName("type")]
+        public string Type { get; set; }
 
+        [JsonPropertyName("setup")]
+        public string Setup { get; set; }
 
-
-
-        //sample data
-        //"id": 278,
-        //"type": "general",
-        //"setup": "What's black and white and read all over?",
-        //"punchline": "The newspaper."
-
+        [JsonPropertyName("punchline")]
+        public string Punchline { get; set; }
     }
 }
